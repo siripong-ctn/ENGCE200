@@ -14,4 +14,4 @@ end Dataflow;
 
 --ghdl -a or_gate.vhd or_gate_tb.vhd
 --ghdl -e or_gate_tb
---ghdl -r or_gate_tb --wave=or_gate_wave.vhd
+--ghdl -r or_gate_tb --wave=or_gate_wave.vcd
