@@ -29,3 +29,8 @@ begin
         wait;
     end process;
 end Behavior;
+
+-- NOT GATE TRUTH TABLE
+--| A |(Y)|
+--| 0 | 1 |
+--| 1 | 0 |
