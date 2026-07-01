@@ -39,7 +39,7 @@ begin
     end process;
 end Behavior;
 
--- GATE GATE TRUTH TABLE
+-- AND GATE TRUTH TABLE
 --| A | B |(Y)|
 --| 0 | 0 | 0 |
 --| 0 | 1 | 0 |
