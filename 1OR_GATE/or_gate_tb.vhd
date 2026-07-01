@@ -38,3 +38,10 @@ begin
         wait;
     end process; --สิ้นสุดการทำงาน
 end Behavior;
+
+-- OR GATE TRUTH TABLE
+--| A | B |(Y)|
+--| 0 | 0 | 0 |
+--| 0 | 1 | 1 |
+--| 1 | 0 | 1 |
+--| 1 | 1 | 1 |

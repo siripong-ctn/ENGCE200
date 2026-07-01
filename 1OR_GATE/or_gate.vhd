@@ -11,12 +11,6 @@ architecture Dataflow of or_gate is --กำหนดการทำงานข
 begin
     Y <= A or B;
 end Dataflow;
--- OR GATE TRUTH TABLE
---| A | B |(Y)|
---| 0 | 0 | 0 |
---| 0 | 1 | 1 |
---| 1 | 0 | 1 |
---| 1 | 1 | 1 |
 
 --ghdl -a or_gate.vhd or_gate_tb.vhd
 --ghdl -e or_gate_tb
