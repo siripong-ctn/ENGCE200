@@ -39,7 +39,7 @@ begin
     end process;
 end Behavior;
 
--- NOR GATE TRUTH TABLE
+-- XOR GATE TRUTH TABLE
 --| A | B |(Y)|
 --| 0 | 0 | 0 |
 --| 0 | 1 | 1 |
