@@ -1,452 +1,217 @@
 # ENGCE200
 ## Digital Systems and Design
 
-### Laboratory: VHDL Design and Simulation Using GHDL
+---
+
+# Introduction
+
+Digital Systems and Design is a field of electronics and computer engineering that focuses on the analysis, design, implementation, and optimization of digital circuits and digital systems. A digital system processes information using discrete values, typically represented by binary digits (0 and 1).
+
+Examples of digital systems include:
+
+- Computers
+- Microprocessors
+- Digital communication systems
+- Embedded systems
+- FPGA-based systems
+- Logic controllers
+
+Digital systems are built using logic gates, combinational circuits, sequential circuits, memory devices, and programmable hardware.
 
 ---
 
-## Overview
+# Number Systems
 
-รายวิชา ENGCE200 มุ่งเน้นการออกแบบและวิเคราะห์ระบบดิจิทัล (Digital Systems) โดยใช้ภาษา VHDL ในการอธิบายลอจิกและพฤติกรรมของวงจรดิจิทัล
+Digital electronics heavily relies on different number systems.
 
-การทดลองนี้ครอบคลุมหัวข้อดังต่อไปนี้
+## Binary (Base-2)
 
-- Multiplexer (MUX) 16:1
-- Demultiplexer (DMUX) 1:16
-- การเชื่อมต่อวงจร MUX 16:1 เข้ากับ DMUX 1:16
-- การจำลองการทำงานด้วย GHDL
-- การวิเคราะห์ Timing Diagram ด้วย GTKWave
+Uses two symbols:
 
----
-
-# Development Environment
-
-### Software
-
-- GHDL
-- GTKWave
-- Visual Studio Code (VS Code)
-- PowerShell / Command Prompt
-
-### Language
-
-- VHDL (VHSIC Hardware Description Language)
-
----
-
-# Basic GHDL Workflow
-
-## 1. Analyze Source Files
-
-ใช้เพื่อตรวจสอบ Syntax และ Compile Source VHDL
-
-```powershell
-ghdl -a MUX16to1.vhd
+```text
+0, 1
 ```
 
-หรือ
+Example:
 
-```powershell
-ghdl -a DMUX1to16.vhd
+```text
+101101₂
 ```
 
-และ
+Conversion:
 
-```powershell
-ghdl -a tb_MUX16to1.vhd
+```text
+101101₂ = 45₁₀
 ```
 
 ---
 
-## 2. Elaborate Design
+## Decimal (Base-10)
 
-สร้าง Simulation Model
+Uses ten symbols:
 
-```powershell
-ghdl -e tb_MUX16to1
+```text
+0,1,2,3,4,5,6,7,8,9
 ```
 
-หรือ
+Example:
 
-```powershell
-ghdl -e tb_DMUX1to16
+```text
+45₁₀
 ```
 
 ---
 
-## 3. Run Simulation
+## Octal (Base-8)
 
-สร้างไฟล์ VCD สำหรับการวิเคราะห์คลื่นลอจิก
+Uses eight symbols:
 
-```powershell
-ghdl -r tb_MUX16to1 --vcd=mux.vcd
+```text
+0,1,2,3,4,5,6,7
 ```
 
-```powershell
-ghdl -r tb_DMUX1to16 --vcd=dmux.vcd
+Example:
+
+```text
+55₈
 ```
 
-```powershell
-ghdl -r tb_mux_dmux16 --vcd=mux_dmux16.vcd
+Equivalent:
+
+```text
+55₈ = 45₁₀
 ```
 
 ---
 
-## 4. Open GTKWave
+## Hexadecimal (Base-16)
 
-เปิดดู Timing Diagram
+Uses sixteen symbols:
 
-```powershell
-gtkwave mux.vcd
+```text
+0-9
+A-F
 ```
 
-```powershell
-gtkwave dmux.vcd
+Example:
+
+```text
+2D₁₆
 ```
 
-```powershell
-gtkwave mux_dmux16.vcd
+Equivalent:
+
+```text
+2D₁₆ = 45₁₀
 ```
 
 ---
 
-# Experiment 1 : Multiplexer 16:1
+# Boolean Algebra
 
-## Objective
+Boolean Algebra is a mathematical system used for analyzing and designing digital logic circuits.
 
-ศึกษาการเลือกอินพุตจำนวน 16 ช่องโดยใช้สัญญาณเลือก 4 บิต
-
-### Inputs
+Boolean variables can only have two values:
 
 ```text
-D0 - D15
-S3 S2 S1 S0
-```
-
-### Output
-
-```text
-Y
-```
-
-### Truth Table
-
-```text
-S3 S2 S1 S0    Output
-
-0000           D0
-0001           D1
-0010           D2
-0011           D3
-0100           D4
-0101           D5
-0110           D6
-0111           D7
-1000           D8
-1001           D9
-1010           D10
-1011           D11
-1100           D12
-1101           D13
-1110           D14
-1111           D15
-```
-
-### Expected GTKWave Result
-
-```text
-D0 → Y
-D1 → Y
-D2 → Y
-...
-D15 → Y
+0 (False)
+1 (True)
 ```
 
 ---
 
-# Experiment 2 : Demultiplexer 1:16
+## Basic Boolean Operations
 
-## Objective
+### AND
 
-ศึกษาการกระจายสัญญาณอินพุตเดียวไปยังเอาต์พุต 16 ช่อง
-
-### Input
+Symbol:
 
 ```text
-D
+A · B
 ```
 
-### Select
+Truth Table:
 
 ```text
-S3 S2 S1 S0
-```
-
-### Outputs
-
-```text
-Y0 - Y15
-```
-
-### Truth Table
-
-```text
-S3 S2 S1 S0    Output
-
-0000           Y0
-0001           Y1
-0010           Y2
-0011           Y3
-0100           Y4
-0101           Y5
-0110           Y6
-0111           Y7
-1000           Y8
-1001           Y9
-1010           Y10
-1011           Y11
-1100           Y12
-1101           Y13
-1110           Y14
-1111           Y15
-```
-
-### Expected GTKWave Result
-
-```text
-D → Y0
-D → Y1
-D → Y2
-...
-D → Y15
+A B | Y
+---------
+0 0 | 0
+0 1 | 0
+1 0 | 0
+1 1 | 1
 ```
 
 ---
 
-# Experiment 3 : MUX 16:1 Connected to DMUX 1:16
+### OR
 
-## Objective
-
-ศึกษาการส่งข้อมูลผ่าน MUX และ DMUX ที่เชื่อมต่อเข้าด้วยกัน
-
-### System Diagram
+Symbol:
 
 ```text
-D0-D15
-   │
-   ▼
-MUX 16:1
-   │
-   ▼
-   M
-   │
-   ▼
-DMUX 1:16
-   │
-   ▼
-Y0-Y15
+A + B
+```
+
+Truth Table:
+
+```text
+A B | Y
+---------
+0 0 | 0
+0 1 | 1
+1 0 | 1
+1 1 | 1
 ```
 
 ---
 
-## Inputs
+### NOT
+
+Symbol:
 
 ```text
-D0-D15
+A'
 ```
 
-### MUX Select
+Truth Table:
 
 ```text
-S_MUX[3:0]
-```
-
-### DMUX Select
-
-```text
-S_DMUX[3:0]
-```
-
-### Outputs
-
-```text
-Y0-Y15
+A | Y
+-------
+0 | 1
+1 | 0
 ```
 
 ---
 
-## Example Operation
+# Logic Gates
 
-### Case 1
+Logic gates are the fundamental building blocks of digital circuits.
 
-```text
-D5 = 1
+---
 
-S_MUX  = 0101
-S_DMUX = 1100
-```
+## AND Gate
 
-Operation
+Produces logic 1 only when all inputs are logic 1.
 
 ```text
-MUX selects D5
-↓
-M = 1
-↓
-DMUX selects Y12
-↓
-Y12 = 1
-```
-
-Result
-
-```text
-D5 → Y12
+Y = A · B
 ```
 
 ---
 
-### Case 2
+## OR Gate
+
+Produces logic 1 if at least one input is logic 1.
 
 ```text
-D2 = 1
-
-S_MUX  = 0010
-S_DMUX = 0111
-```
-
-Result
-
-```text
-D2 → Y7
+Y = A + B
 ```
 
 ---
 
-### Case 3
+## NOT Gate
+
+Inverts the input signal.
 
 ```text
-D15 = 1
-
-S_MUX  = 1111
-S_DMUX = 0000
-```
-
-Result
-
-```text
-D15 → Y0
-```
-
----
-
-# Timing Diagram Analysis
-
-แนะนำให้แสดงสัญญาณดังนี้
-
-```text
-D0
-D1
-...
-D15
-
-S_MUX
-
-M
-
-S_DMUX
-
-Y0
-Y1
-...
-Y15
-```
-
-เพื่อให้สามารถมองเห็นการไหลของข้อมูลได้ชัดเจน
-
-```text
-D7
- ↓
-MUX
- ↓
-M
- ↓
-DMUX
- ↓
-Y7
-```
-
----
-
-# Common GHDL Errors
-
-## Cannot Open File
-
-```text
-error: cannot open MUX16to1.vhd
-```
-
-### Solution
-
-ตรวจสอบว่าไฟล์อยู่ใน Directory ปัจจุบัน
-
-```powershell
-dir *.vhd
-```
-
----
-
-## Cannot Find Enti*y
-
-```text
-error: cannot find enti*y
-```
-
-### Solution
-
-ตรวจสอบชื่อ E*tity
-
-```vhdl
-entity MUX16to1 is
-`*`
-
-และใช้ชื่อเดียวกันในคำ*ั่ง
-
-```powershell
-ghdl -e MUX16to**```
-
----
-
-## Bad Character in Iden*ifier
-
-```text
-error: bad characte* in identifier
-```
-
-### Incorrect
-*```vhdl
-entity MUX16-1 is
-```
-
-###*Correct
-
-```vhdl
-entity MUX16_1 is*```
-
----
-
-# Conclusion
-
-จากการทดลอ*พบว่า
-
-- Multiplexer 16:1 สามารถเล*อกข้อมูลจากอินพุต 16 ช่องได้ถูกต้อ*
-- Demultiplexer 1:16 สามารถ*ระจายข้อมูลไปยังเอาต์พุต 16 ช่องได*ถูกต้อง
-- วงจร MUX →*DMUX ทำงานสอดคล้องกับ Truth*Table ทุกกรณี
-- การจำลอง*้วย*GHDL และการว*เคราะห์ด้วย GTKWave ช่วยให้สามารถต*วจสอบพฤติกรรมของวงจรดิจิทัลได้อย่า*ชัดเจน
-- การแสดงผล*บบ*D0-D15 และ Y0-Y15 เห*าะสำหรับการวิเคราะห์เชิงการศึกษา*ละการจัดทำรายงานในรายวิชา Digital *ystems and Design
-
----
-**Course*** ENGCE200 - Digital Systems and *esign  
-**Tools:** V*DL, GHDL, GTKWave  
-**Topic:** Multiplexer, Demultiplex*r, Digital Logic Design
-````*
+Y = A'
