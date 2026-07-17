@@ -14,22 +14,22 @@ architecture sim of tb_mux_dmux16 is
   signal Y : std_logic_vector(15 downto 0);
 
   -- แตก D ออกเป็นรายเส้น
-  signal D0  : std_logic;
-  signal D1  : std_logic;
-  signal D2  : std_logic;
-  signal D3  : std_logic;
-  signal D4  : std_logic;
-  signal D5  : std_logic;
-  signal D6  : std_logic;
-  signal D7  : std_logic;
-  signal D8  : std_logic;
-  signal D9  : std_logic;
-  signal D10 : std_logic;
-  signal D11 : std_logic;
-  signal D12 : std_logic;
-  signal D13 : std_logic;
-  signal D14 : std_logic;
-  signal D15 : std_logic;
+  signal D0  : std_logic:= '0';
+  signal D1  : std_logic:= '0';
+  signal D2  : std_logic:= '0';
+  signal D3  : std_logic:= '0';
+  signal D4  : std_logic:= '0';
+  signal D5  : std_logic:= '0';
+  signal D6  : std_logic:= '0';
+  signal D7  : std_logic:= '0';
+  signal D8  : std_logic:= '0';
+  signal D9  : std_logic:= '0';
+  signal D10 : std_logic:= '0';
+  signal D11 : std_logic:= '0';
+  signal D12 : std_logic:= '0';
+  signal D13 : std_logic:= '0';
+  signal D14 : std_logic:= '0';
+  signal D15 : std_logic:= '0';
 
   -- แตก Y ออกเป็นรายเส้น
   signal Y0  : std_logic;

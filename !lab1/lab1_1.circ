@@ -202,6 +202,54 @@
     <comp lib="9" loc="(275,1305)" name="Text">
       <a name="text" val="S0"/>
     </comp>
+    <comp lib="9" loc="(467,587)" name="Text">
+      <a name="text" val="W6"/>
+    </comp>
+    <comp lib="9" loc="(468,715)" name="Text">
+      <a name="text" val="W8"/>
+    </comp>
+    <comp lib="9" loc="(472,637)" name="Text">
+      <a name="text" val="W7"/>
+    </comp>
+    <comp lib="9" loc="(475,522)" name="Text">
+      <a name="text" val="W5"/>
+    </comp>
+    <comp lib="9" loc="(480,767)" name="Text">
+      <a name="text" val="W9"/>
+    </comp>
+    <comp lib="9" loc="(483,462)" name="Text">
+      <a name="text" val="W4"/>
+    </comp>
+    <comp lib="9" loc="(492,837)" name="Text">
+      <a name="text" val="W10"/>
+    </comp>
+    <comp lib="9" loc="(493,960)" name="Text">
+      <a name="text" val="W12"/>
+    </comp>
+    <comp lib="9" loc="(495,1078)" name="Text">
+      <a name="text" val="W14"/>
+    </comp>
+    <comp lib="9" loc="(495,332)" name="Text">
+      <a name="text" val="W2"/>
+    </comp>
+    <comp lib="9" loc="(497,388)" name="Text">
+      <a name="text" val="W3"/>
+    </comp>
+    <comp lib="9" loc="(498,895)" name="Text">
+      <a name="text" val="W11"/>
+    </comp>
+    <comp lib="9" loc="(507,268)" name="Text">
+      <a name="text" val="W1"/>
+    </comp>
+    <comp lib="9" loc="(508,1022)" name="Text">
+      <a name="text" val="W13"/>
+    </comp>
+    <comp lib="9" loc="(510,1138)" name="Text">
+      <a name="text" val="W15"/>
+    </comp>
+    <comp lib="9" loc="(518,208)" name="Text">
+      <a name="text" val="W0"/>
+    </comp>
     <comp lib="9" loc="(60,395)" name="Text">
       <a name="text" val="D3"/>
     </comp>
