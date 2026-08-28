@@ -1,0 +1,7 @@
+v 4
+file . "test.vhd" "064c44eac1f94b3230a41e9d7458891d983404b2" "20260828053800.070":
+  entity test at 1( 0) + 0 on 31;
+  architecture behavioral of test at 14( 278) + 0 on 32;
+file . "tb_test.vhd" "cde68c525a2dc31c95bd5db105d9d8891657ebcf" "20260828053800.086":
+  entity tb_test at 1( 0) + 0 on 33;
+  architecture behavioral of tb_test at 7( 82) + 0 on 34;
