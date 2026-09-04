@@ -58,6 +58,8 @@ begin
     L11 <= (A2 and A1) and
            ((A0 and B2 and B1 and B0) or
            (not A0 and B2 and B1 and not B0));
+    -- Make L be input Multiplex
+    -- A, B be output Multiplex       
 
     A_more_B  <= L0 or L1 or L2 or L3;
     A_less_B  <= L4 or L5 or L6 or L7;
