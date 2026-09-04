@@ -1,7 +1,16 @@
 v 4
+<<<<<<< HEAD
 file . "tb_test.vhd" "70761e9eefd974a3a1f92472d8bc3238fc99506c" "20260828070011.129":
   entity tb_test at 1( 0) + 0 on 37;
   architecture behavioral of tb_test at 7( 82) + 0 on 38;
 file . "test.vhd" "064c44eac1f94b3230a41e9d7458891d983404b2" "20260828070011.128":
   entity test at 1( 0) + 0 on 35;
   architecture behavioral of test at 14( 278) + 0 on 36;
+=======
+file . "test.vhd" "473beb9ef5e18d685ca5fd33b3c63c03bc1c0d75" "20260903180623.492":
+  entity test at 1( 0) + 0 on 15;
+  architecture behavioral of test at 14( 278) + 0 on 16;
+file . "tb_test.vhd" "bcf856ae8dce87723a33c513052776c0357bb14c" "20260903180623.492":
+  entity tb_test at 1( 0) + 0 on 17;
+  architecture behavioral of tb_test at 7( 82) + 0 on 18;
+>>>>>>> a60bf17dae9ac9f7324e5b31642a931d1752bb50
