@@ -23,7 +23,7 @@ begin
         case SEL is
             when "00" => A_more_B <= (A0 and not B2 and not B1 and not B0);
             when "01" => A_more_B <= ((not B2 and not B1) or (A0 and not B2 and B1 and not B0));
-            when "10" => A_more_B <= (B2 or (A0 and B2 and not B1 and not B0));
+            when "10" => A_more_B <= (not B2 or (A0 and B2 and not B1 and not B0));
             when others => A_more_B <= (not B2 or not B1 or (A0 and B2 and B1 and not B0));
         end case;
     end process;
