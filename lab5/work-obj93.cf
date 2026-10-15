@@ -1,0 +1,7 @@
+v 4
+file . "tb.vhd" "d4b9600930033e0c13f0c045b593b76dfc6a841d" "20261015131533.603":
+  entity tb_bcd_adder_subtractor at 1( 0) + 0 on 23;
+  architecture behavioral of tb_bcd_adder_subtractor at 7( 114) + 0 on 24;
+file . "design.vhd" "a7185b233a17d7bcfa05630c033eed0b1b4ccff2" "20261015131533.574":
+  entity bcd_adder_subtractor at 1( 0) + 0 on 21;
+  architecture behavioral of bcd_adder_subtractor at 19( 455) + 0 on 22;

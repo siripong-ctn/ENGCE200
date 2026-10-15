@@ -1,0 +1,124 @@
+$date
+  Thu Oct 15 20:15:53 2026
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module numeric_std $end
+$upscope $end
+$scope module tb_bcd_adder_subtractor $end
+$var reg 4 ! a_h[3:0] $end
+$var reg 4 " a_t[3:0] $end
+$var reg 4 # a_u[3:0] $end
+$var reg 4 $ b_h[3:0] $end
+$var reg 4 % b_t[3:0] $end
+$var reg 4 & b_u[3:0] $end
+$var reg 4 ' s_h[3:0] $end
+$var reg 4 ( s_t[3:0] $end
+$var reg 4 ) s_u[3:0] $end
+$var reg 1 * m $end
+$var reg 1 + cout $end
+$scope module uut $end
+$var reg 4 , a_h[3:0] $end
+$var reg 4 - a_t[3:0] $end
+$var reg 4 . a_u[3:0] $end
+$var reg 4 / b_h[3:0] $end
+$var reg 4 0 b_t[3:0] $end
+$var reg 4 1 b_u[3:0] $end
+$var reg 1 2 m $end
+$var reg 4 3 s_h[3:0] $end
+$var reg 4 4 s_t[3:0] $end
+$var reg 4 5 s_u[3:0] $end
+$var reg 1 6 cout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b0010 !
+b0100 "
+b0101 #
+b0011 $
+b0111 %
+b1000 &
+b0110 '
+b0010 (
+b0011 )
+0*
+0+
+b0010 ,
+b0100 -
+b0101 .
+b0011 /
+b0111 0
+b1000 1
+02
+b0110 3
+b0010 4
+b0011 5
+06
+#100000000
+b0101 !
+b1000 "
+b1001 #
+b0100 $
+b1010 '
+b0110 (
+b0111 )
+1+
+b0101 ,
+b1000 -
+b1001 .
+b0100 /
+b1010 3
+b0110 4
+b0111 5
+16
+#200000000
+b0110 !
+b0011 "
+b0101 #
+b0010 $
+b0001 %
+b0100 &
+b0100 '
+b0010 (
+b0001 )
+1*
+0+
+b0110 ,
+b0011 -
+b0101 .
+b0010 /
+b0001 0
+b0100 1
+12
+b0100 3
+b0010 4
+b0001 5
+06
+#300000000
+b0101 !
+b0000 "
+b0000 #
+b0001 $
+b0010 %
+b0101 &
+b0011 '
+b0111 (
+b0101 )
+b0101 ,
+b0000 -
+b0000 .
+b0001 /
+b0010 0
+b0101 1
+b0011 3
+b0111 4
+b0101 5
